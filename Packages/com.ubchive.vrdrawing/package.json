@@ -1,0 +1,30 @@
+{
+  "name": "com.ubchive.vrdrawing",
+  "displayName": "UBC HIVE VR Drawing",
+  "version": "0.1.2",
+  "unity": "6000.3",
+  "description": "Organ visualization and 3D VR drawing toolkit built on XRI + XR Hands.",
+
+  "dependencies": {
+    "com.unity.xr.interaction.toolkit": "3.3.1",
+    "com.unity.xr.hands": "1.7.2",
+    "com.unity.xr.management": "4.5.3",
+    "com.unity.xr.openxr": "1.15.1",
+    "com.unity.xr.arfoundation": "6.3.1",
+    "com.unity.test-framework": "1.6.0",
+    "com.unity.xr.meta-openxr": "2.1.1"
+  },
+
+  "samples": [
+    {
+      "displayName": "Demo Scene",
+      "description": "Example organ + drawing setup",
+      "path": "Samples"
+    }
+  ],
+
+  "author": {
+    "name": "UBC HIVE",
+    "email": "your@email.com"
+  }
+}

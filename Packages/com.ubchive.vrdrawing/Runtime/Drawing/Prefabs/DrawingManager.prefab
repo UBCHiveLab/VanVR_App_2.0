@@ -1,0 +1,73 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3464597412617901225
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 4394024271837100149}
+  - component: {fileID: 7209688997926339397}
+  - component: {fileID: 525979620884803553}
+  m_Layer: 0
+  m_Name: DrawingManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4394024271837100149
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3464597412617901225}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.18296, y: 0, z: 2.5976}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &7209688997926339397
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3464597412617901225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f1ba21725f2308d409c158396eab36f3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  tip: {fileID: 0}
+  baseDrawMaterial: {fileID: 2100000, guid: f295189a35fc25e47aca87affe74aa53, type: 2}
+  penWidth: 0
+  minPointDistance: 0.005
+  targetObject: {fileID: 0}
+  currentColor: {r: 1, g: 0, b: 0, a: 1}
+  penEnabled: 0
+  widthSlider: {fileID: 0}
+  sliderMin: 0.002
+  sliderMax: 0.025
+  sliderValue: 0.005
+  blockMenuUntilTime: 0
+--- !u!114 &525979620884803553
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3464597412617901225}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d4b9df7e2fc794340b61131b9e2866aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: '::'
+  drawing: {fileID: 7209688997926339397}
+  penToggle: {fileID: 0}

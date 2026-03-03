@@ -1,0 +1,14 @@
+{
+    "name": "Nishoriginal.Vrdrawing.Editor.Tests",
+    "references": [
+        "Nishoriginal.Vrdrawing.Editor",
+        "Nishoriginal.Vrdrawing"
+    ],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": []
+}

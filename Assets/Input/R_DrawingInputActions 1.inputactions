@@ -1,0 +1,95 @@
+{
+    "version": 1,
+    "name": "R_DrawingInputActions 1",
+    "maps": [
+        {
+            "name": "R_Drawing",
+            "id": "84e4fa24-ea0b-4ea0-a5a6-de7dd493f3a7",
+            "actions": [
+                {
+                    "name": "Draw",
+                    "type": "Button",
+                    "id": "0b8fe8d6-3e62-446b-af1a-efccf33c3300",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Undo",
+                    "type": "Button",
+                    "id": "6ecf2b09-78c2-4434-8130-58ccab21ca7c",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Width",
+                    "type": "Value",
+                    "id": "0f3e3500-c1ac-4761-9a3c-d650f41f229e",
+                    "expectedControlType": "Stick",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Grip",
+                    "type": "Button",
+                    "id": "ecb6828c-c102-4af0-b3e4-b0c876dcda34",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "128cb613-99d5-4448-92aa-86c5896cbf0a",
+                    "path": "<XRController>{RightHand}/{TriggerButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Draw",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "944ad0d8-68ce-4505-b3af-e5b6a073554d",
+                    "path": "<XRController>{RightHand}/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Undo",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "deb8fc61-1103-4094-be69-4d4075f062a9",
+                    "path": "<XRController>{RightHand}/{Primary2DAxis}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Width",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "802294cc-de25-41e8-9f3e-bf3e0f7fd75f",
+                    "path": "<XRController>{RightHand}/{GripButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Grip",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

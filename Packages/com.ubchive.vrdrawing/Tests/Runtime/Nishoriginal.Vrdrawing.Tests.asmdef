@@ -1,0 +1,11 @@
+{
+    "name": "Nishoriginal.Vrdrawing.Tests",
+    "references": [
+        "Nishoriginal.Vrdrawing"
+    ],
+    "optionalUnityReferences": [
+        "TestAssemblies"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": []
+}
