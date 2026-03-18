@@ -26,11 +26,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a8a764ea7cc5d534d8d9c9f3af7d204b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.829
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a8a764ea7cc5d534d8d9c9f3af7d204b, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0.39
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: a8a764ea7cc5d534d8d9c9f3af7d204b, type: 3}
       propertyPath: m_LocalRotation.w
@@ -64,6 +64,10 @@ PrefabInstance:
       propertyPath: m_ConstrainProportionsScale
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7635826562936255635, guid: a8a764ea7cc5d534d8d9c9f3af7d204b, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 3c6525889b5f3684a8d156ca29f0a049, type: 2}
     - target: {fileID: 919132149155446097, guid: a8a764ea7cc5d534d8d9c9f3af7d204b, type: 3}
       propertyPath: m_Name
       value: Heart_dental_demo_ID_2555_812Kpoly_V2
@@ -91,7 +95,15 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a8a764ea7cc5d534d8d9c9f3af7d204b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 8786641294752725506}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a8a764ea7cc5d534d8d9c9f3af7d204b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 3664569038773265177}
   m_SourcePrefab: {fileID: 100100000, guid: a8a764ea7cc5d534d8d9c9f3af7d204b, type: 3}
+--- !u!4 &5774415419629225763 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: a8a764ea7cc5d534d8d9c9f3af7d204b, type: 3}
+  m_PrefabInstance: {fileID: 6316405437611942088}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &6586805372394773913 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a8a764ea7cc5d534d8d9c9f3af7d204b, type: 3}
@@ -296,7 +308,7 @@ MeshCollider:
   m_ProvidesContacts: 0
   m_Enabled: 1
   serializedVersion: 5
-  m_Convex: 1
+  m_Convex: 0
   m_CookingOptions: 30
   m_Mesh: {fileID: -2432090755550338912, guid: a8a764ea7cc5d534d8d9c9f3af7d204b, type: 3}
 --- !u!114 &8786641294752725506
@@ -311,3 +323,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 535a1861450f8cb479686c5673d5f656, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
+--- !u!114 &3664569038773265177
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6586805372394773913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ebbb7aea40efe544fa2b1085fb74a8fc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::OrganContext
+  drawingTarget: {fileID: 5774415419629225763}

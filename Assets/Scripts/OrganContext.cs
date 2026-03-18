@@ -1,12 +1,9 @@
 using UnityEngine;
 
-// Supplies the drawing target transform for a specific organ instance.
-public class OrganContext : MonoBehaviour, IOrganContext
+public class OrganContext : MonoBehaviour
 {
     [SerializeField] private Transform drawingTarget;
 
-    public Transform GetDrawingTarget()
-    {
-        return drawingTarget != null ? drawingTarget : transform;
-    }
+    // This is what OrganSpawner will read
+    public Transform DrawingTarget => drawingTarget != null ? drawingTarget : transform;
 }

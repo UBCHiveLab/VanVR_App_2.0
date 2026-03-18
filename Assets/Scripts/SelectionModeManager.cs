@@ -124,9 +124,9 @@ public class SelectionModeManager : MonoBehaviour
         }
     }
 
-    static readonly Dictionary<Renderer, MaterialPropertyBlock> s_mpbs = new();
+    readonly Dictionary<Renderer, MaterialPropertyBlock> s_mpbs = new();
 
-    static void SetRendererAlpha(Renderer r, float alpha)
+    void SetRendererAlpha(Renderer r, float alpha)
     {
         if (!r || !r.sharedMaterial) return;
 

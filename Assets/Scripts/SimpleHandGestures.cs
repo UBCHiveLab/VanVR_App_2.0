@@ -94,6 +94,14 @@ public class SimpleHandGestures : MonoBehaviour
 
     void Awake()
     {
+        // Reset stale state from previous play session
+        s_currentDrawer = null;
+        s_leftControllerGrabbing = false;
+        s_rightControllerGrabbing = false;
+        CurrentDrawingHand = null;
+        LeftIsGrabbing = false;
+        RightIsGrabbing = false;
+        
         if (handMenu == null)
             handMenu = FindFirstObjectByType<HandMenu>();
     }

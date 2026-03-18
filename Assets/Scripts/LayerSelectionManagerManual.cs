@@ -42,23 +42,7 @@ public class LayerSelectionManagerManual : MonoBehaviour
     void Awake()
     {
         if (!layersRoot) layersRoot = transform;
-        allLayers.AddRange(layersRoot.GetComponentsInChildren<BrainLayer>(true));
-
-        foreach (var layer in allLayers)
-        {
-            if (!layer || !layer.rend || !layer.rend.sharedMaterial) continue;
-            var r = layer.rend;
-
-            Color c = Color.white;
-            if (r.sharedMaterial.HasProperty("_BaseColor"))
-                c = r.sharedMaterial.GetColor("_BaseColor");
-            else if (r.sharedMaterial.HasProperty("_Color"))
-                c = r.sharedMaterial.GetColor("_Color");
-
-            originalColor[r] = c;
-            mpbCache[r] = new MaterialPropertyBlock();
-        }
-
+        RebuildLayerCache();
         SetSelectionMode(false);
     }
 
@@ -79,6 +63,8 @@ public class LayerSelectionManagerManual : MonoBehaviour
 
     public void SetSelectionMode(bool enabled)
     {
+        Debug.Log($"[LayerSelection] SetSelectionMode({enabled}) on object: {gameObject.name}");
+        
         selectionModeEnabled = enabled;
 
         // Drawing off during selection mode
@@ -107,7 +93,7 @@ public class LayerSelectionManagerManual : MonoBehaviour
         }
     }
 
-    // Called by an interactor event (we’ll wire this up in step 2)
+    // Called by an interactor event
     public void ToggleSelectionFromPointer(Transform pointer)
     {
         if (!selectionModeEnabled) return;
@@ -193,12 +179,12 @@ public class LayerSelectionManagerManual : MonoBehaviour
 
             if (!anySelected)
             {
-                // No selection => whole model opaque, original colors
+                // No selected layers: everything back to normal
                 RestoreOriginal(layer.rend, 1f);
             }
             else
             {
-                // Selection exists => selected opaque, unselected translucent (original colors)
+                // Selection exists: selected opaque, unselected translucent
                 if (selected.Contains(layer))
                     RestoreOriginal(layer.rend, 1f);
                 else
@@ -244,5 +230,37 @@ public class LayerSelectionManagerManual : MonoBehaviour
         if (!originalColor.TryGetValue(r, out var c)) c = Color.white;
         c.a = alpha;
         SetColor(r, c, alpha);
+    }
+
+    public void RebuildLayerCache()
+    {
+        allLayers.Clear();
+        originalColor.Clear();
+        mpbCache.Clear();
+        hovered = null;
+        selected.Clear();
+
+        if (!layersRoot) layersRoot = transform;
+
+        allLayers.AddRange(layersRoot.GetComponentsInChildren<BrainLayer>(true));
+
+        Debug.Log($"[LayerSelection] RebuildLayerCache on {gameObject.name}");
+        Debug.Log($"[LayerSelection] layersRoot = {layersRoot.name}");
+        Debug.Log($"[LayerSelection] found {allLayers.Count} BrainLayer objects");
+
+        foreach (var layer in allLayers)
+        {
+            if (!layer || !layer.rend || !layer.rend.sharedMaterial) continue;
+            var r = layer.rend;
+
+            Color c = Color.white;
+            if (r.sharedMaterial.HasProperty("_BaseColor"))
+                c = r.sharedMaterial.GetColor("_BaseColor");
+            else if (r.sharedMaterial.HasProperty("_Color"))
+                c = r.sharedMaterial.GetColor("_Color");
+
+            originalColor[r] = c;
+            mpbCache[r] = new MaterialPropertyBlock();
+        }
     }
 }

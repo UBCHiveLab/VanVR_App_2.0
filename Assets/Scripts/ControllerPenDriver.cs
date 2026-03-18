@@ -41,7 +41,7 @@ public class ControllerPenDriver : MonoBehaviour
 
     [Header("UI Block (Near-Far)")]
     [SerializeField] XRUIInputModule uiInputModule;
-    [SerializeField] int pointerId;                 
+    [SerializeField] UnityEngine.XR.Interaction.Toolkit.Interactors.NearFarInteractor nearFarInteractor;
     [SerializeField] bool blockDrawingWhenHoveringUI = true;
 
     static ControllerPenDriver s_currentDrawer;
@@ -49,6 +49,7 @@ public class ControllerPenDriver : MonoBehaviour
 
     void Awake()
     {
+        s_currentDrawer = null;
         if (handMenu == null)
             handMenu = FindFirstObjectByType<HandMenu>();
     }
@@ -138,8 +139,21 @@ public class ControllerPenDriver : MonoBehaviour
 
     bool IsOverUI()
     {
+        if (!blockDrawingWhenHoveringUI) return false;
+
+        if (uiInputModule == null)
+            uiInputModule = UnityEngine.Object.FindFirstObjectByType<UnityEngine.XR.Interaction.Toolkit.UI.XRUIInputModule>();
+
         if (uiInputModule == null) return false;
-        return uiInputModule.IsPointerOverGameObject(pointerId);
+        if (nearFarInteractor == null) return false;
+
+        // Get the pointer ID specifically for this interactor
+        if (nearFarInteractor.TryGetUIModel(out var uiModel))
+        {
+            return uiInputModule.IsPointerOverGameObject(uiModel.pointerId);
+        }
+
+        return false;
     }
 
     // Called when the trigger button on the controller is pressed (also called "Activate" in the input system).

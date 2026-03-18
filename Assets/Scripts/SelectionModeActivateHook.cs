@@ -1,10 +1,10 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 
-// Bridges an input action to the manual layer selection manager to toggle selection at the pointer.
+// Bridges an input action to the current spawned organ's layer selection manager.
 public class SelectionModeActivateHook : MonoBehaviour
 {
-    public LayerSelectionManagerManual manager;
+    public OrganSpawner organSpawner;
 
     [Tooltip("Use the FAR aim transform (controller aim / far caster origin), not poke.")]
     public Transform pointerOrigin;
@@ -32,7 +32,7 @@ public class SelectionModeActivateHook : MonoBehaviour
 
     void OnActivatePerformed(InputAction.CallbackContext ctx)
     {
-        if (!manager || !manager.selectionModeEnabled) return;
-        manager.ToggleSelectionFromPointer(pointerOrigin);
+        if (!organSpawner) return;
+        organSpawner.ToggleCurrentOrganLayerSelection(pointerOrigin);
     }
 }

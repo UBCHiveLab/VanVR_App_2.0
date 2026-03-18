@@ -48,6 +48,11 @@ public class HandDrawingSystem : MonoBehaviour
             widthSlider.SetValueWithoutNotify(penWidth);
         }
     }
+
+    void Awake()
+    {
+        isDrawing = false;
+    }
     
     public void SetPenEnabled(bool enabled)
     {
