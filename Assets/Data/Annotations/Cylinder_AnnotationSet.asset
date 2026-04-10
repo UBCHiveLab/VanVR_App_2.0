@@ -1,0 +1,84 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-1561805714432551492
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb55aad8901c9884dbcd934a3e99e3f1, type: 3}
+  m_Name: AP_3_New Annotation
+  m_EditorClassIdentifier: Assembly-CSharp::AnnotationPoint
+  id: 3
+  label: New Annotation
+  description: 
+  localPosition: {x: -0.08049035, y: 1, z: -0.15424253}
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 39ec99fd218b15a4b9d295688ee2d5f4, type: 3}
+  m_Name: Cylinder_AnnotationSet
+  m_EditorClassIdentifier: Assembly-CSharp::AnnotationSet
+  organId: Cylinder
+  points:
+  - {fileID: 2561612937508520651}
+  - {fileID: 6708353585578278587}
+  - {fileID: -1561805714432551492}
+  - {fileID: 8641956523934325491}
+--- !u!114 &2561612937508520651
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb55aad8901c9884dbcd934a3e99e3f1, type: 3}
+  m_Name: AP_1_New Annotation
+  m_EditorClassIdentifier: Assembly-CSharp::AnnotationPoint
+  id: 1
+  label: New Annotation
+  description: 
+  localPosition: {x: 0.34840828, y: -0.27736053, z: -0.5000002}
+--- !u!114 &6708353585578278587
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb55aad8901c9884dbcd934a3e99e3f1, type: 3}
+  m_Name: AP_2_New Annotation
+  m_EditorClassIdentifier: Assembly-CSharp::AnnotationPoint
+  id: 2
+  label: New Annotation
+  description: 
+  localPosition: {x: 0.5000002, y: 0.84692293, z: 0.11493927}
+--- !u!114 &8641956523934325491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb55aad8901c9884dbcd934a3e99e3f1, type: 3}
+  m_Name: AP_4_New Annotation
+  m_EditorClassIdentifier: Assembly-CSharp::AnnotationPoint
+  id: 4
+  label: New Annotation
+  description: 
+  localPosition: {x: 0.5000002, y: -0.7524444, z: -0.18247889}

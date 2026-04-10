@@ -17,6 +17,8 @@ GameObject:
   - component: {fileID: 7695338192827602625}
   - component: {fileID: 3354776719708518971}
   - component: {fileID: 5091407759330597931}
+  - component: {fileID: 2593614480301040255}
+  - component: {fileID: 2546009094133786947}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -322,3 +324,44 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OrganContext
   drawingTarget: {fileID: 2290246604039213812}
+--- !u!114 &2593614480301040255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294848461249086335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16c962fa882e8c44a9e2209a50673937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnnotationAuthor
+  organDefinition: {fileID: 11400000, guid: 2d52136862330b147805590f0dec5ccc, type: 2}
+  points:
+  - id: 1
+    label: New Annotation
+    description: 
+    localPosition: {x: -0.23187041, y: -0.045994222, z: -0.5}
+  - id: 2
+    label: New Annotation
+    description: 
+    localPosition: {x: 0.5, y: -0.09028517, z: -0.04578635}
+  - id: 3
+    label: New Annotation
+    description: 
+    localPosition: {x: 0.4524295, y: 0.021602623, z: 0.5}
+--- !u!114 &2546009094133786947
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294848461249086335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d498cdb5e0c5b8646a0eff6f5afbc7d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnnotationSpawner
+  organDefinition: {fileID: 11400000, guid: 2d52136862330b147805590f0dec5ccc, type: 2}
+  annotationMarkerPrefab: {fileID: 2290185192950655702, guid: 43dd55608bd68bc4d8b06449741d77f8, type: 3}
+  headTransform: {fileID: 0}

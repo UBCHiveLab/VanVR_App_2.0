@@ -16,3 +16,4 @@ MonoBehaviour:
   displayName: Cylinder
   thumbnail: {fileID: 0}
   prefab: {fileID: 294848461249086335, guid: 0f329cc8b7138dc4dac1ec10ef5d7584, type: 3}
+  annotations: {fileID: 11400000, guid: 8a85c25864d254644b43bc6e6c7e78bf, type: 2}

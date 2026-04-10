@@ -16,3 +16,4 @@ MonoBehaviour:
   displayName: Cube
   thumbnail: {fileID: 0}
   prefab: {fileID: 294848461249086335, guid: abdbfad4962071a47937b872c0392a19, type: 3}
+  annotations: {fileID: 11400000, guid: 7b871f39328354a4ea9c71d65d042bf8, type: 2}

@@ -98,6 +98,12 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a8a764ea7cc5d534d8d9c9f3af7d204b, type: 3}
       insertIndex: -1
       addedObject: {fileID: 3664569038773265177}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a8a764ea7cc5d534d8d9c9f3af7d204b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 8605867170645446150}
+    - targetCorrespondingSourceObject: {fileID: 919132149155446097, guid: a8a764ea7cc5d534d8d9c9f3af7d204b, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 667513630277068152}
   m_SourcePrefab: {fileID: 100100000, guid: a8a764ea7cc5d534d8d9c9f3af7d204b, type: 3}
 --- !u!4 &5774415419629225763 stripped
 Transform:
@@ -336,3 +342,71 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::OrganContext
   drawingTarget: {fileID: 5774415419629225763}
+--- !u!114 &8605867170645446150
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6586805372394773913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16c962fa882e8c44a9e2209a50673937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnnotationAuthor
+  organDefinition: {fileID: 11400000, guid: b0e4a4208a4c1f046b50a6122a87308c, type: 2}
+  points:
+  - id: 1
+    label: Label 1
+    description: Lorem Ipsum is simply dummy text of the printing and typesetting
+      industry. Lorem Ipsum has been the industry's standard dummy text ever since
+      the 1500s, when an unknown printer took a galley of type and scrambled it to
+      make a type specimen book.
+    localPosition: {x: -0.051545575, y: 0.04623092, z: 0.11440416}
+  - id: 2
+    label: Label 2
+    description: Lorem Ipsum is simply dummy text of the printing and typesetting
+      industry. Lorem Ipsum has been the industry's standard dummy text ever since
+      the 1500s, when an unknown printer took a galley of type and scrambled it to
+      make a type specimen book.
+    localPosition: {x: 0.017795287, y: 0.02782023, z: 0.18977594}
+  - id: 3
+    label: Label 3
+    description: Lorem Ipsum is simply dummy text of the printing and typesetting
+      industry. Lorem Ipsum has been the industry's standard dummy text ever since
+      the 1500s, when an unknown printer took a galley of type and scrambled it to
+      make a type specimen book.
+    localPosition: {x: -0.038057163, y: -0.016842581, z: 0.109989956}
+  - id: 4
+    label: Label 4
+    description: Lorem Ipsum is simply dummy text of the printing and typesetting
+      industry. Lorem Ipsum has been the industry's standard dummy text ever since
+      the 1500s, when an unknown printer took a galley of type and scrambled it to
+      make a type specimen book.
+    localPosition: {x: 0.12059419, y: 0.05717747, z: 0.077350914}
+  - id: 5
+    label: Label 5
+    description: 
+    localPosition: {x: 0.14182307, y: 0.01923351, z: 0.075123385}
+  - id: 6
+    label: Label 6
+    description: Lorem Ipsum is simply dummy text of the printing and typesetting
+      industry. Lorem Ipsum has been the industry's standard dummy text ever since
+      the 1500s, when an unknown printer took a galley of type and scrambled it to
+      make a type specimen book.
+    localPosition: {x: 0.12901908, y: -0.020846516, z: 0.11451426}
+--- !u!114 &667513630277068152
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6586805372394773913}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d498cdb5e0c5b8646a0eff6f5afbc7d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnnotationSpawner
+  organDefinition: {fileID: 11400000, guid: b0e4a4208a4c1f046b50a6122a87308c, type: 2}
+  annotationMarkerPrefab: {fileID: 2290185192950655702, guid: 43dd55608bd68bc4d8b06449741d77f8, type: 3}
+  headTransform: {fileID: 0}

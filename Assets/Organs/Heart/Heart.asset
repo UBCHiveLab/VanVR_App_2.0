@@ -16,3 +16,4 @@ MonoBehaviour:
   displayName: Heart
   thumbnail: {fileID: 0}
   prefab: {fileID: 6586805372394773913, guid: ad3559492e9e2084ca591778953f9ffa, type: 3}
+  annotations: {fileID: 11400000, guid: b1ed17bba9bc5fc44b24685105b89487, type: 2}

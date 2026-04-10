@@ -8,4 +8,5 @@ public class OrganDefinition : ScriptableObject
     public string displayName;
     public Sprite thumbnail;
     public GameObject prefab;
+    public AnnotationSet annotations;
 }

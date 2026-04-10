@@ -16,3 +16,4 @@ MonoBehaviour:
   displayName: Brain Layers
   thumbnail: {fileID: 0}
   prefab: {fileID: 3393707945458932218, guid: 0f7e7e76043a2f24cb9a904aad6d86db, type: 3}
+  annotations: {fileID: 11400000, guid: a5e90db7a5529a44eb2236dbf0cf81ae, type: 2}

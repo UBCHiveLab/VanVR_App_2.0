@@ -17,6 +17,8 @@ GameObject:
   - component: {fileID: 3354776719708518971}
   - component: {fileID: 5091407759330597931}
   - component: {fileID: 3944146637224131529}
+  - component: {fileID: 7295534943206108154}
+  - component: {fileID: 4458182908416415489}
   m_Layer: 0
   m_Name: Sphere
   m_TagString: Untagged
@@ -324,3 +326,44 @@ CapsuleCollider:
   m_Height: 1
   m_Direction: 1
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &7295534943206108154
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294848461249086335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16c962fa882e8c44a9e2209a50673937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnnotationAuthor
+  organDefinition: {fileID: 11400000, guid: eff6fb61f9734d942bf64160dc113426, type: 2}
+  points:
+  - id: 1
+    label: New Annotation
+    description: 
+    localPosition: {x: -0.35326743, y: 0.0629437, z: -0.34820497}
+  - id: 2
+    label: New Annotation
+    description: 
+    localPosition: {x: 0.22826537, y: 0.34174204, z: -0.28485358}
+  - id: 3
+    label: New Annotation
+    description: 
+    localPosition: {x: -0.31970465, y: 0.34706593, z: -0.16543746}
+--- !u!114 &4458182908416415489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294848461249086335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d498cdb5e0c5b8646a0eff6f5afbc7d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnnotationSpawner
+  organDefinition: {fileID: 11400000, guid: eff6fb61f9734d942bf64160dc113426, type: 2}
+  annotationMarkerPrefab: {fileID: 2290185192950655702, guid: 43dd55608bd68bc4d8b06449741d77f8, type: 3}
+  headTransform: {fileID: 0}

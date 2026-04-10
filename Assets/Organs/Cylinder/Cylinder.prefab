@@ -17,6 +17,8 @@ GameObject:
   - component: {fileID: 3354776719708518971}
   - component: {fileID: 5091407759330597931}
   - component: {fileID: 6301479117544215125}
+  - component: {fileID: 8292528972529562169}
+  - component: {fileID: 1449372296635350685}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -322,3 +324,48 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.0000001, y: 2, z: 1.0000002}
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &8292528972529562169
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294848461249086335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 16c962fa882e8c44a9e2209a50673937, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnnotationAuthor
+  organDefinition: {fileID: 11400000, guid: 43ba9b71bbbfda644ab684c65797ea28, type: 2}
+  points:
+  - id: 1
+    label: New Annotation
+    description: 
+    localPosition: {x: 0.34840828, y: -0.27736053, z: -0.5000002}
+  - id: 2
+    label: New Annotation
+    description: 
+    localPosition: {x: 0.5000002, y: 0.84692293, z: 0.11493927}
+  - id: 3
+    label: New Annotation
+    description: 
+    localPosition: {x: -0.08049035, y: 1, z: -0.15424253}
+  - id: 4
+    label: New Annotation
+    description: 
+    localPosition: {x: 0.5000002, y: -0.7524444, z: -0.18247889}
+--- !u!114 &1449372296635350685
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294848461249086335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d498cdb5e0c5b8646a0eff6f5afbc7d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AnnotationSpawner
+  organDefinition: {fileID: 11400000, guid: 43ba9b71bbbfda644ab684c65797ea28, type: 2}
+  annotationMarkerPrefab: {fileID: 2290185192950655702, guid: 43dd55608bd68bc4d8b06449741d77f8, type: 3}
+  headTransform: {fileID: 0}

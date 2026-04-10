@@ -16,3 +16,4 @@ MonoBehaviour:
   displayName: Sphere
   thumbnail: {fileID: 0}
   prefab: {fileID: 294848461249086335, guid: a29f25579454a874f828272e641dd2ca, type: 3}
+  annotations: {fileID: 11400000, guid: 6fc1b07513318ce478952e38fefaedf1, type: 2}
