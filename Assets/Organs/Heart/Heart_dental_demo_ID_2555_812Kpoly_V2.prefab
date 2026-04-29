@@ -410,3 +410,4 @@ MonoBehaviour:
   organDefinition: {fileID: 11400000, guid: b0e4a4208a4c1f046b50a6122a87308c, type: 2}
   annotationMarkerPrefab: {fileID: 2290185192950655702, guid: 43dd55608bd68bc4d8b06449741d77f8, type: 3}
   headTransform: {fileID: 0}
+  markerWorldSize: 0.005

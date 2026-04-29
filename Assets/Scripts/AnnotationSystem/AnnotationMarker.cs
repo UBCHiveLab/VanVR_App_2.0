@@ -1,5 +1,4 @@
 using UnityEngine;
-using UnityEngine.XR.Interaction.Toolkit.Interactables;
 using TMPro;
 
 public class AnnotationMarker : MonoBehaviour
@@ -9,9 +8,9 @@ public class AnnotationMarker : MonoBehaviour
 
     [Header("References")]
     public TextMeshPro idText;
+    public MeshRenderer discRenderer;
 
     [Header("Billboard Appearance")]
-    public float billboardSize = 0.05f;
     public Color normalColor   = new Color(0.2f, 0.6f, 1f, 1f);
     public Color hoveredColor  = new Color(1f, 0.85f, 0f, 1f);
     public Color selectedColor = new Color(0f, 1f, 0.4f, 1f);
@@ -19,35 +18,42 @@ public class AnnotationMarker : MonoBehaviour
     [Header("Hover Scale")]
     public float lerpSpeed = 8f;
 
-    private Vector3 _normalScale;
-    private Vector3 _hoveredScale;
-    private Vector3 _targetScale;
-    private Color   _targetColor;
+    [HideInInspector] public float markerWorldSize = 0.005f;
+
+    private float _normalWorldSize;
+    private float _hoveredWorldSize;
+    private float _targetWorldSize;
+    private Color _targetColor;
     private Transform _head;
-    private MeshRenderer _meshRenderer;
     private MaterialPropertyBlock _mpb;
+
+    public bool IsSelected { get; private set; }
 
     void Awake()
     {
-        _mpb          = new MaterialPropertyBlock();
-        _normalScale  = Vector3.one * billboardSize;
-        _hoveredScale = Vector3.one * billboardSize * 1.4f;
-        _targetScale  = _normalScale;
-        _targetColor  = normalColor;
+        _mpb         = new MaterialPropertyBlock();
+        _targetColor = normalColor;
 
-        BuildQuadMesh();
         SetColorImmediate(normalColor);
-        transform.localScale = _normalScale;
+
+        // ensure collider exists on root for raycasting
+        var col = GetComponent<BoxCollider>();
+        if (col == null) col = gameObject.AddComponent<BoxCollider>();
+        col.size   = new Vector3(1f, 0.05f, 1f);
+        col.center = Vector3.zero;
     }
 
     void Start()
     {
-        _head = Camera.main?.transform;
+        _head             = Camera.main?.transform;
+        _normalWorldSize  = markerWorldSize;
+        _hoveredWorldSize = markerWorldSize * 1.4f;
+        _targetWorldSize  = _normalWorldSize;
     }
 
     void Update()
     {
-        // billboard
+        // billboard — always face camera
         if (_head != null)
         {
             Vector3 toHead = _head.position - transform.position;
@@ -55,16 +61,26 @@ public class AnnotationMarker : MonoBehaviour
                 transform.rotation = Quaternion.LookRotation(-toHead);
         }
 
-        // smooth scale
-        transform.localScale = Vector3.Lerp(transform.localScale, _targetScale, Time.deltaTime * lerpSpeed);
+        // enforce world-space size every frame
+        float parentWorldScale = transform.parent != null ? transform.parent.lossyScale.x : 1f;
+        if (parentWorldScale > 0f)
+        {
+            float currentWorldSize = Mathf.Lerp(
+                transform.localScale.x * parentWorldScale,
+                _targetWorldSize,
+                Time.deltaTime * lerpSpeed
+            );
+            float localSize = currentWorldSize / parentWorldScale;
+            transform.localScale = Vector3.one * localSize;
+        }
 
         // smooth color
-        if (_meshRenderer != null)
+        if (discRenderer != null)
         {
-            _meshRenderer.GetPropertyBlock(_mpb);
+            discRenderer.GetPropertyBlock(_mpb);
             Color current = _mpb.GetColor("_BaseColor");
             _mpb.SetColor("_BaseColor", Color.Lerp(current, _targetColor, Time.deltaTime * lerpSpeed));
-            _meshRenderer.SetPropertyBlock(_mpb);
+            discRenderer.SetPropertyBlock(_mpb);
         }
     }
 
@@ -77,62 +93,35 @@ public class AnnotationMarker : MonoBehaviour
 
     public void OnHoverBegin()
     {
-        _targetScale = _hoveredScale;
-        _targetColor = hoveredColor;
+        _targetWorldSize = _hoveredWorldSize;
+        _targetColor     = hoveredColor;
     }
 
     public void OnHoverEnd()
     {
-        _targetScale = _normalScale;
-        _targetColor = normalColor;
+        _targetWorldSize = _normalWorldSize;
+        _targetColor     = normalColor;
     }
 
     public void Select()
     {
-        _targetScale = _hoveredScale;
-        _targetColor = selectedColor;
+        _targetWorldSize = _hoveredWorldSize;
+        _targetColor     = selectedColor;
+        IsSelected = true;
     }
 
     public void Deselect()
     {
-        _targetScale = _normalScale;
-        _targetColor = normalColor;
-    }
-
-    private void BuildQuadMesh()
-    {
-        var mf = GetComponent<MeshFilter>();
-        if (mf == null) mf = gameObject.AddComponent<MeshFilter>();
-
-        if (_meshRenderer == null) _meshRenderer = GetComponent<MeshRenderer>();
-        if (_meshRenderer == null) _meshRenderer = gameObject.AddComponent<MeshRenderer>();
-
-        float h = 0.5f;
-        var mesh = new Mesh { name = "AnnotationBillboard" };
-        mesh.vertices  = new Vector3[] { new(-h,-h,0), new(h,-h,0), new(h,h,0), new(-h,h,0) };
-        mesh.uv        = new Vector2[] { new(0,0), new(1,0), new(1,1), new(0,1) };
-        mesh.triangles = new int[] { 0, 2, 1, 0, 3, 2 };
-        mesh.RecalculateNormals();
-        mf.mesh = mesh;
-
-        if (_meshRenderer.sharedMaterial == null)
-        {
-            var mat = new Material(Shader.Find("Universal Render Pipeline/Unlit"));
-            mat.color = normalColor;
-            _meshRenderer.sharedMaterial = mat;
-        }
-
-        var col = GetComponent<BoxCollider>();
-        if (col == null) col = gameObject.AddComponent<BoxCollider>();
-        col.size   = new Vector3(1f, 1f, 0.01f);
-        col.center = Vector3.zero;
+        _targetWorldSize = _normalWorldSize;
+        _targetColor     = normalColor;
+        IsSelected = false;
     }
 
     private void SetColorImmediate(Color color)
     {
-        if (_meshRenderer == null) return;
-        _meshRenderer.GetPropertyBlock(_mpb);
+        if (discRenderer == null) return;
+        discRenderer.GetPropertyBlock(_mpb);
         _mpb.SetColor("_BaseColor", color);
-        _meshRenderer.SetPropertyBlock(_mpb);
+        discRenderer.SetPropertyBlock(_mpb);
     }
 }

@@ -16,6 +16,88 @@ MonoBehaviour:
   label: New Annotation
   description: 
   localPosition: {x: -0.042661674, y: -0.14400001, z: 0.014477253}
+--- !u!114 &-4136548370313859882
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb55aad8901c9884dbcd934a3e99e3f1, type: 3}
+  m_Name: AP_1_Layer 4
+  m_EditorClassIdentifier: Assembly-CSharp::AnnotationPoint
+  id: 1
+  label: Layer 4
+  description: The is the second last layer of the brain. It does certain functions.
+  localPosition: {x: -0.042661674, y: -0.14400001, z: 0.014477253}
+--- !u!114 &-3550394511451389752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb55aad8901c9884dbcd934a3e99e3f1, type: 3}
+  m_Name: AP_4_Vertical Cross-section
+  m_EditorClassIdentifier: Assembly-CSharp::AnnotationPoint
+  id: 4
+  label: Vertical Cross-section
+  description: This is the vertical cross section of the brain. It is not related
+    to the layers below, as they are the horizontal sections.
+  localPosition: {x: -0.01867946, y: 0.22566132, z: 0.005000001}
+--- !u!114 &-1554767052192927454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb55aad8901c9884dbcd934a3e99e3f1, type: 3}
+  m_Name: AP_2_Layer 3
+  m_EditorClassIdentifier: Assembly-CSharp::AnnotationPoint
+  id: 2
+  label: Layer 3
+  description: This is the middle layer of the brain. It looks very interesting.
+  localPosition: {x: 0.010852165, y: -0.043999996, z: 0.009353237}
+--- !u!114 &-805452893067519702
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb55aad8901c9884dbcd934a3e99e3f1, type: 3}
+  m_Name: AP_5_fjhsdfljsdaf
+  m_EditorClassIdentifier: Assembly-CSharp::AnnotationPoint
+  id: 5
+  label: fjhsdfljsdaf
+  description: sdfgsdgffghfdg
+  localPosition: {x: -0.025512189, y: -0.24399999, z: 0.013985748}
+--- !u!114 &-216831438973816548
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb55aad8901c9884dbcd934a3e99e3f1, type: 3}
+  m_Name: AP_3_Layer 2
+  m_EditorClassIdentifier: Assembly-CSharp::AnnotationPoint
+  id: 3
+  label: Layer 2
+  description: This is the second layer of the brain. It looks like a mushroom. It
+    does some functions.
+  localPosition: {x: 0.031589694, y: 0.04664739, z: 0.06143919}
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -30,9 +112,28 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::AnnotationSet
   organId: BrainLayers
   points:
-  - {fileID: -4717266797447578023}
-  - {fileID: 4954487406930003893}
-  - {fileID: 6320171290048693142}
+  - {fileID: 9067923923453878363}
+  - {fileID: -1554767052192927454}
+  - {fileID: -216831438973816548}
+  - {fileID: 7537256992098849069}
+  - {fileID: -805452893067519702}
+--- !u!114 &4280614439435031374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb55aad8901c9884dbcd934a3e99e3f1, type: 3}
+  m_Name: AP_3_Layer 2
+  m_EditorClassIdentifier: Assembly-CSharp::AnnotationPoint
+  id: 3
+  label: Layer 2
+  description: This is the second layer of the brain. It looks like a mushroom. It
+    does some functions.
+  localPosition: {x: 0.031589694, y: 0.04664739, z: 0.06143919}
 --- !u!114 &4954487406930003893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -48,6 +149,22 @@ MonoBehaviour:
   id: 2
   label: New Annotation
   description: 
+  localPosition: {x: 0.010852165, y: -0.043999996, z: 0.009353237}
+--- !u!114 &5108524095052123995
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb55aad8901c9884dbcd934a3e99e3f1, type: 3}
+  m_Name: AP_2_Layer 3
+  m_EditorClassIdentifier: Assembly-CSharp::AnnotationPoint
+  id: 2
+  label: Layer 3
+  description: This is the middle layer of the brain. It looks very interesting.
   localPosition: {x: 0.010852165, y: -0.043999996, z: 0.009353237}
 --- !u!114 &6320171290048693142
 MonoBehaviour:
@@ -65,3 +182,36 @@ MonoBehaviour:
   label: New Annotation
   description: 
   localPosition: {x: 0.031589694, y: 0.04664739, z: 0.06143919}
+--- !u!114 &7537256992098849069
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb55aad8901c9884dbcd934a3e99e3f1, type: 3}
+  m_Name: AP_4_Vertical Cross-section
+  m_EditorClassIdentifier: Assembly-CSharp::AnnotationPoint
+  id: 4
+  label: Vertical Cross-section
+  description: This is the vertical cross section of the brain. It is not related
+    to the layers below, as they are the horizontal sections.
+  localPosition: {x: -0.01867946, y: 0.22566132, z: 0.005000001}
+--- !u!114 &9067923923453878363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb55aad8901c9884dbcd934a3e99e3f1, type: 3}
+  m_Name: AP_1_Layer 4
+  m_EditorClassIdentifier: Assembly-CSharp::AnnotationPoint
+  id: 1
+  label: Layer 4
+  description: The is the second last layer of the brain. It does certain functions.
+  localPosition: {x: -0.042661674, y: -0.14400001, z: 0.014477253}

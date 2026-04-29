@@ -37,8 +37,8 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 2121127963857632437}
   - {fileID: 7207912315255003482}
@@ -355,17 +355,23 @@ MonoBehaviour:
   organDefinition: {fileID: 11400000, guid: 284c8f87b670ec64aad0660712cfdd6b, type: 2}
   points:
   - id: 1
-    label: New Annotation
-    description: 
+    label: Layer 4
+    description: The is the second last layer of the brain. It does certain functions.
     localPosition: {x: -0.042661674, y: -0.14400001, z: 0.014477253}
   - id: 2
-    label: New Annotation
-    description: 
+    label: Layer 3
+    description: This is the middle layer of the brain. It looks very interesting.
     localPosition: {x: 0.010852165, y: -0.043999996, z: 0.009353237}
   - id: 3
-    label: New Annotation
-    description: 
+    label: Layer 2
+    description: This is the second layer of the brain. It looks like a mushroom.
+      It does some functions.
     localPosition: {x: 0.031589694, y: 0.04664739, z: 0.06143919}
+  - id: 4
+    label: Vertical Cross-section
+    description: This is the vertical cross section of the brain. It is not related
+      to the layers below, as they are the horizontal sections.
+    localPosition: {x: -0.01867946, y: 0.22566132, z: 0.005000001}
 --- !u!114 &3461718205050079431
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -381,6 +387,7 @@ MonoBehaviour:
   organDefinition: {fileID: 11400000, guid: 284c8f87b670ec64aad0660712cfdd6b, type: 2}
   annotationMarkerPrefab: {fileID: 2290185192950655702, guid: 43dd55608bd68bc4d8b06449741d77f8, type: 3}
   headTransform: {fileID: 0}
+  markerWorldSize: 0.005
 --- !u!1 &3617074574509894403
 GameObject:
   m_ObjectHideFlags: 0

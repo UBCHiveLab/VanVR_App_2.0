@@ -15,3 +15,7 @@ MonoBehaviour:
   organs:
   - {fileID: 11400000, guid: 284c8f87b670ec64aad0660712cfdd6b, type: 2}
   - {fileID: 11400000, guid: b0e4a4208a4c1f046b50a6122a87308c, type: 2}
+  - {fileID: 11400000, guid: 438c96b9bbc174543b3f748037395fb7, type: 2}
+  - {fileID: 11400000, guid: 43ba9b71bbbfda644ab684c65797ea28, type: 2}
+  - {fileID: 11400000, guid: eff6fb61f9734d942bf64160dc113426, type: 2}
+  - {fileID: 11400000, guid: 2d52136862330b147805590f0dec5ccc, type: 2}

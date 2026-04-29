@@ -7,39 +7,23 @@ public class AnnotationSpawner : MonoBehaviour
     public GameObject annotationMarkerPrefab;
 
     [Header("Settings")]
-    public Transform headTransform;   // assigned at runtime by whatever spawns the organ
-
-    private void Start()
-    {
-        SpawnAnnotations();
-    }
+    public Transform headTransform;
+    public float markerWorldSize = 0.005f;
 
     public void SpawnAnnotations()
     {
-        Debug.Log($"[AnnotationSpawner] SpawnAnnotations called on {gameObject.name}");
-
         if (organDefinition == null)
         {
-            Debug.LogWarning($"[AnnotationSpawner] No OrganDefinition assigned on {gameObject.name}");
+            Debug.LogWarning($"[AnnotationSpawner] No OrganDefinition on {gameObject.name}");
             return;
         }
 
-        Debug.Log($"[AnnotationSpawner] OrganDefinition: {organDefinition.name}");
-
-        if (organDefinition.annotations == null)
-        {
-            Debug.LogWarning($"[AnnotationSpawner] annotations is null on {organDefinition.name}");
-            return;
-        }
-
-        Debug.Log($"[AnnotationSpawner] Annotation points count: {organDefinition.annotations.points.Count}");
-
-        if (organDefinition.annotations.points.Count == 0)
+        if (organDefinition.annotations == null || organDefinition.annotations.points.Count == 0)
             return;
 
         if (annotationMarkerPrefab == null)
         {
-            Debug.LogWarning($"[AnnotationSpawner] No AnnotationMarker prefab assigned on {gameObject.name}");
+            Debug.LogWarning($"[AnnotationSpawner] No marker prefab on {gameObject.name}");
             return;
         }
 
@@ -48,19 +32,19 @@ public class AnnotationSpawner : MonoBehaviour
 
         foreach (var point in organDefinition.annotations.points)
         {
-            Debug.Log($"[AnnotationSpawner] Spawning point {point.id} at {point.localPosition}");
-
             GameObject go = Instantiate(annotationMarkerPrefab, transform);
+            go.name = $"Annotation_{point.id}_{point.label}";
+
             Vector3 dirFromCenter = point.localPosition.normalized;
             go.transform.localPosition = point.localPosition + dirFromCenter * 0.005f;
             go.transform.localRotation = Quaternion.identity;
-            go.name = $"Annotation_{point.id}_{point.label}";
 
             var marker = go.GetComponent<AnnotationMarker>();
             if (marker != null)
+            {
+                marker.markerWorldSize = markerWorldSize;
                 marker.Initialize(point, headTransform);
-            else
-                Debug.LogWarning($"[AnnotationSpawner] No AnnotationMarker component found on prefab");
+            }
         }
     }
 }

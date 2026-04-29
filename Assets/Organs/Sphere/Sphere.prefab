@@ -35,7 +35,7 @@ Transform:
   m_GameObject: {fileID: 294848461249086335}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0.041, y: 1.091, z: 0.76}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.1, y: 0.1, z: 0.1}
   m_ConstrainProportionsScale: 1
   m_Children: []
@@ -352,6 +352,14 @@ MonoBehaviour:
     label: New Annotation
     description: 
     localPosition: {x: -0.31970465, y: 0.34706593, z: -0.16543746}
+  - id: 4
+    label: New Annotation
+    description: 
+    localPosition: {x: -0.21236412, y: -0.05741492, z: -0.44901067}
+  - id: 5
+    label: New Annotation
+    description: 
+    localPosition: {x: -0.49056345, y: 0.08509092, z: -0.045990646}
 --- !u!114 &4458182908416415489
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -367,3 +375,4 @@ MonoBehaviour:
   organDefinition: {fileID: 11400000, guid: eff6fb61f9734d942bf64160dc113426, type: 2}
   annotationMarkerPrefab: {fileID: 2290185192950655702, guid: 43dd55608bd68bc4d8b06449741d77f8, type: 3}
   headTransform: {fileID: 0}
+  markerWorldSize: 0.005

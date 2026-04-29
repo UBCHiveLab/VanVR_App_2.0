@@ -31,9 +31,6 @@ MonoBehaviour:
   id: 6
   label: Label 6
   description: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-    when an unknown printer took a galley of type and scrambled it to make a type
-    specimen book.
   localPosition: {x: 0.12901908, y: -0.020846516, z: 0.11451426}
 --- !u!114 &-5722961976635606207
 MonoBehaviour:
@@ -66,9 +63,6 @@ MonoBehaviour:
   id: 1
   label: Label 1
   description: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-    when an unknown printer took a galley of type and scrambled it to make a type
-    specimen book.
   localPosition: {x: -0.051545575, y: 0.04623092, z: 0.11440416}
 --- !u!114 &-1096766615627901556
 MonoBehaviour:
@@ -137,9 +131,6 @@ MonoBehaviour:
   id: 3
   label: Label 3
   description: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-    when an unknown printer took a galley of type and scrambled it to make a type
-    specimen book.
   localPosition: {x: -0.038057163, y: -0.016842581, z: 0.109989956}
 --- !u!114 &1835843454113608744
 MonoBehaviour:
@@ -156,9 +147,6 @@ MonoBehaviour:
   id: 4
   label: Label 4
   description: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-    when an unknown printer took a galley of type and scrambled it to make a type
-    specimen book.
   localPosition: {x: 0.12059419, y: 0.05717747, z: 0.077350914}
 --- !u!114 &3325554544829556336
 MonoBehaviour:
@@ -175,9 +163,6 @@ MonoBehaviour:
   id: 2
   label: Label 2
   description: Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-    Lorem Ipsum has been the industry's standard dummy text ever since the 1500s,
-    when an unknown printer took a galley of type and scrambled it to make a type
-    specimen book.
   localPosition: {x: 0.017795287, y: 0.02782023, z: 0.18977594}
 --- !u!114 &6397813047837353770
 MonoBehaviour:

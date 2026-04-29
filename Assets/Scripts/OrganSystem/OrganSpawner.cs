@@ -13,6 +13,7 @@ public class OrganSpawner : MonoBehaviour
     [Header("Scene refs")]
     [SerializeField] private AppSceneReferences sceneRefs;
     [SerializeField] private HandDrawingSystem drawingSystem;
+    [SerializeField] private LabelSpawner labelSpawner;
 
     private LayerSelectionManagerManual currentLayerSelectionManager;
 
@@ -41,6 +42,8 @@ public class OrganSpawner : MonoBehaviour
 
         if (currentInstance != null)
         {
+            if (labelSpawner != null)
+                labelSpawner.ClearAll();
             Destroy(currentInstance);
             currentInstance = null;
         }
@@ -57,6 +60,13 @@ public class OrganSpawner : MonoBehaviour
         currentInstance.transform.localRotation = Quaternion.identity;
         // currentInstance.transform.localScale = Vector3.one;
         Debug.Log("Transform OK");
+
+        var annotationSpawner = currentInstance.GetComponent<AnnotationSpawner>();
+        if (annotationSpawner != null)
+            annotationSpawner.SpawnAnnotations();
+        
+        if (labelSpawner != null)
+            labelSpawner.SetOrganRoot(currentInstance.transform);
 
         var brainBinder = currentInstance.GetComponentInChildren<BrainSceneBinder>(true);
         if (brainBinder != null && sceneRefs != null)
@@ -95,7 +105,7 @@ public class OrganSpawner : MonoBehaviour
 
     public void SetBrainSelectionMode(bool enabled)
     {
-        Debug.Log($"[OrganSpawner] SetCurrentOrganSelectionMode({enabled})");
+        Debug.Log($"[Organdddder] SetCurrentOrganSelectionMode({enabled})");
 
         if (currentInstance == null)
         {
